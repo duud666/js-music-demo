@@ -1,0 +1,597 @@
+<!doctype html><!--声明html版本编写指令  H5-->
+<html>
+	<head>
+		<!--声明页面编码  uft-8 国际编码-->
+		<meta charset="UTF-8">
+		<!--网站三要素 关键字  页面描述  标题-->
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	
+	<style type="text/css">
+				*{
+		margin:0;
+		padding:0;
+		}
+		body{
+			background: rgb(55, 76, 86);
+		}
+	
+		.photo{
+			width:320px;
+			height:700px;
+			margin:50px 200px;
+			<!-- background:#000; -->
+			font-family:"微软雅黑";
+			padding: 5px;
+			background-color:#222;
+			border-radius: 20px;
+			box-shadow: 0 0 7px #fff;
+			overflow:hidden;
+			
+		}
+		.top{
+			width:320px;
+			height:23px;
+		
+		}
+		.title{
+			width:320px;
+			height:30px;
+			background:url("images/2.png") no-repeat;
+			font-size:20px;
+			color:#ccc;
+			font-weight:bold;
+			text-align:center;
+			line-height:30px;
+		}
+		.play{
+			width:190px;
+			height:190px;
+			background:url("images/8.jpg") no-repeat;
+			margin:auto;
+			border-radius:50%;
+		}
+		.singer{
+			width:320px;
+			font-size:16px;
+			color:#ccc;
+			text-align:center;
+			line-height:40px;
+		}
+		.lrc{
+			width:320px;
+			height:430px;
+			margin:15px auto;
+			text-align:center;
+			overflow:hidden;
+			color:#ccc;
+			background:url("images/7.jpg") no-repeat;
+			
+			
+		}
+		.lrc p{
+			line-height:30px;
+			font-size:16px;
+			font-weight:bold;
+		}
+		.content{
+			position:relative;
+			left:0;
+			top:0;
+			overflow:hidden;
+			
+		}
+		.play.rotate{
+			-webkit-animation:rot 5s linear infinite;
+			-moz-animation:rot 5s linear infinite;
+			-ms-animation:rot 5s linear infinite;
+			-o-animation:rot 5s linear infinite;
+			animation:rot 5s linear infinite;
+		}
+
+		@keyframes rot{
+			from{transform:rotate(0deg);}
+			to{transform:rotate(360deg);}
+		}
+		.input{
+			width:70px;
+			height:40px;
+			border-radius:70px;
+			outline:none;
+			color:white;
+			background:black;
+			font-weight:bold;
+			letter-spacing:1px;
+			
+		}
+		.input:hover{
+		background:orange;
+		}
+		#wide-wrapper{
+			
+			width:900px;
+			height:700px;
+			padding: 5px;
+			background-color:#222;
+			border-left:none;
+			border-radius:10px;
+			box-shadow: 0 0 7px #fff;
+			position:absolute;
+			top:50px;
+			left:530px;
+			
+		}
+		
+
+		
+		@keyframes fn{
+		0% {transform:rotateX(-40deg) rotateY(0deg);}
+		100%{transform:rotateX(-30deg) rotateY(360deg);}
+
+		}
+		@-moz-keyframes fn{
+			0% {transform:rotateX(0deg) rotateY(0deg);}
+			100%{transform:rotateX(-15deg) rotateY(360deg);}
+		}
+		@-ms-keyframes fn{
+			0% {transform:rotateX(0deg) rotateY(0deg);}
+			100%{transform:rotateX(-15deg) rotateY(360deg);}
+		}
+		@-webkit-keyframes fn{
+			0% {transform:rotateX(0deg) rotateY(0deg);}
+			100%{transform:rotateX(-15deg) rotateY(360deg);}
+		}
+		img{
+			width:205px;
+			height: 400px;
+		}
+		.box{				
+			width:400px;
+			height:500px;
+			position:relative;
+			margin:auto;
+			margin-top:150px;
+			transform-style:preserve-3d;
+			transform:rotateX(-50deg);
+			animation: fn 30s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			position: relative
+		}
+		.box:hover{
+			animation-play-state: paused;
+			cursor:pointer;
+		}
+		.box>div{
+			width:205px;
+			height:500px;
+			position: absolute;
+			left:0;
+			top:0;
+			
+		}
+	</style>
+	</head>
+	<body>
+	<textarea id="txt" style="display:none"><!-- 隐藏此文本域 -->
+[00:00.64]一路上有你 - 张学友
+[00:03.70]曲：Jacky
+[00:04.14]编曲：Jacky	
+[00:10.60]你知道吗
+[00:12.37]爱你并不容易
+[00:15.80]还需要很多勇气
+[00:20.90]是天意吧	
+[00:23.00]好多话说不出去
+[00:26.54]就是怕你负担不起
+[00:31.39]你相信吗
+[00:33.15]这一生遇见你
+[00:36.57]是上辈子我欠你的
+[00:41.43]是天意吧	
+[00:43.79]让我爱上你
+[00:47.29]才又让你 离我而去
+[00:53.31]也许轮回里 早已注定
+[00:57.65]今生就该我还给你
+[01:03.63]一颗心在风雨里
+[01:06.49]飘来飘去
+[01:08.54]都是为你
+[01:15.09]一路上有你
+[01:17.65]苦一点也愿意
+[01:20.23]就算是为了分离与我相遇
+[01:25.49]一路上有你
+[01:28.12]痛一点也愿意
+[01:30.71]就算这辈子注定要和你分离
+[01:44.50]你知道吗
+[01:46.29]爱你并不容易
+[01:49.59]还需要很多勇气
+[01:54.77]是天意吧
+[01:56.87]好多话说不出去
+[02:00.30]就是怕你负担不起
+[02:05.36]你相信吗
+[02:07.11]这一生遇见你
+[02:10.37]是上辈子我欠你的
+[02:15.63]是天意吧
+[02:17.64]让我爱上你
+[02:21.09]才又让你离我而去
+[02:26.81]也许轮回里 早已注定
+[02:31.31]今生就该我还给你
+[02:37.46]一颗心在风雨里
+[02:40.43]飘来飘去
+[02:42.75]都是为你
+[02:49.23]一路上有你
+[02:51.48]苦一点也愿意
+[02:54.14]就算是为了分离与我相遇
+[02:59.05]一路上有你
+[03:01.87]痛一点也愿意
+[03:04.50]就算这辈子注定要和你分离
+[03:38.48]一路上有你
+[03:40.95]苦一点也愿意
+[03:43.58]就算是为了分离与我相遇
+[03:48.92]一路上有你
+[03:51.39]痛一点也愿意
+[03:53.98]就算这辈子注定要和你分离
+[03:59.35]一路上有你
+[04:01.83]苦一点也愿意
+[04:04.30]就算是为了分离与我相遇
+[04:09.75]一路上有你
+[04:12.23]痛一点也愿意
+[04:14.71]就算只能在梦里拥抱你
+[04:23.09]
+		</textarea>
+		<textarea id="txt1" style="display:none"><!-- 隐藏此文本域 -->
+[00:01.64]遥远的她 - 张学友
+[00:05.00] 作曲 : 谷村新司
+[00:07.00] 作词 : 吕承明
+[00:10.00]
+[00:25.900]让晚风轻轻吹送了落霞
+[00:30.899]我已习惯每个傍晚去想她
+[00:36.897]在远方的她 此刻可知道
+[00:42.897]这段情在我心 始终记挂
+[00:49.897]在这半山 那天我知我知快将要别离没说话
+[00:55.897]望向她 却听到她说不要相约
+[00:59.897]纵使分隔 相爱不会害怕
+[01:01.897]遥遥万里 心声有否偏差
+[01:07.898]正是让这爱试出真与假
+[01:13.898]遥远的她 仿佛借风声跟我话
+[01:20.898]热情若没变 那管它沧桑变化
+[01:28.898]
+[01:39.898]但这天收到 她爸爸的一封信
+[01:45.898]信里面说 血癌已带走她
+[01:51.898]但觉得空虚 的心仿佛已僵化
+[01:57.898]过去事象炮弹 心中爆炸
+[02:03.898]在这半山 这天我悲痛悲痛不已在胡乱说话
+[02:10.900]夜雨中 似听到她说不要相约
+[02:13.900]纵使分隔 相爱不会害怕
+[02:16.900]人无觅处 心声有否偏差
+[02:23.900]正是让这爱试出真与假
+[02:29.900]遥远的她 仿佛借风声跟我话
+[02:35.900]热情若没变 那管它沧桑变化
+[02:43.900]
+[03:06.900]遥远的她 不可以再归家
+[03:13.900]我在梦里却始终只有她
+[03:18.900]遥远的她 可知我心中的说话
+[03:25.900]热情并没变 那管它沧桑变化
+[03:31.900]遥远的她 不可以再归家
+[03:37.900]我在梦里却始终只有她
+[03:43.900]遥远的她 可知我心中的说话
+[03:50.900]热情并没变 那管它沧桑变化
+		</textarea>
+		
+		
+		<div class="photo">
+			<div class="top"></div>
+			<div class="title">一路上有你</div>
+			<div class="singer" style="font-size:26px"><strong>张学友</strong></div>
+			<div class="play"><!--开始图片--></div>
+			<div id="anniu">
+				<input class="input" type="button" id="upMusic" value="上一首" >
+				<input class="input" type="button" id="nextMusic" value="下一首">
+				<input class="input" type="button" id="musicLoad" value="播放">
+				<input class="input" type="button" id="musicPause" value="暂停">
+			</div>
+			<div class="lrc">
+				<div class="content"></div>
+			</div>
+			
+			
+			
+		</div>
+			<div id="wide-wrapper">
+				<div class="box">
+					<div style="transform: rotateY(0deg) translateZ(280px);">
+						<img src="images/11.jpg" >
+					</div>
+					<div style="transform: rotateY(40deg) translateZ(280px);">
+						<img src="images/12.jpg" >
+					</div>
+					<div style="transform: rotateY(80deg) translateZ(280px);">
+						<img src="images/13.jpg" >
+					</div>
+					<div style="transform: rotateY(120deg) translateZ(280px);">
+						<img src="images/14.jpg" >
+					</div>
+					<div style="transform: rotateY(160deg) translateZ(280px);">
+						<img src="images/15.jpg" >
+					</div>
+					<div style="transform: rotateY(200deg) translateZ(280px);">
+						<img src="images/16.jpg" >
+					</div>
+					<div style="transform: rotateY(240deg) translateZ(280px);">
+						<img src="images/17.jpg" >
+					</div>
+					<div style="transform: rotateY(280deg) translateZ(280px);">
+						<img src="images/18.jpg" >
+					</div>
+					<div style="transform: rotateY(320deg) translateZ(280px);">
+						<img src="images/6.jpg" >
+					</div>	
+				</div>					
+						
+				
+
+			</div>
+		
+		<audio src="mp3/张学友-一路上有你.mp3" id="myMusic" value="一路上有你"></audio><!--音频标签-->
+		<audio src="mp3/张学友 - 遥远的她.mp3" id="xiaoxingyun" value="遥远的她"></audio><!--音频标签-->
+	</body>
+	<script type="text/javascript">
+	
+	var btn = document.getElementsByClassName("play")[0];//通过class类名去获取元素 数组的形式储存  []
+	var myMusic = document.getElementById("myMusic");//通过ID
+	var xiaoxingyun = document.getElementById("xiaoxingyun");//通过ID
+	var txt = document.getElementById("txt");//获取歌词
+	var txt1 = document.getElementById("txt1");//获取歌词
+	var con = document.getElementsByClassName("content")[0];//获取内容区域
+	var title = document.getElementsByClassName("title")[0];
+	var lrc = document.getElementsByClassName("lrc")[0];
+	
+	var a=true;
+	var mark = true;//布尔值   true真  false假
+	var start1=1;
+	var start2=0;
+	
+	
+
+	
+	btn.onclick = function(){ //点击事件，点击就播放
+		
+		if (mark)//隐式转换  i > 1
+		{
+			this.className += " rotate";//点击添加旋转样式
+			myMusic.play();//播放音乐
+			music1();
+			
+			mark = false;
+		}else{
+			this.className = "play";//点击恢复样式
+			myMusic.pause();//音乐暂停
+			mark = true;
+		}
+		
+	}
+	
+	
+	//上一首播放
+	document.getElementById("upMusic").onclick = function(){
+
+			document.getElementById('xiaoxingyun').load(); //第二首停止
+			btn.className = "play";//点击恢复样式
+			con.innerHTML="";
+		if(a==false){ //第二首播放
+		
+			btn.style="background:url('images/8.jpg') no-repeat;";
+			lrc.style="background:url('images/7.jpg') no-repeat;";
+			btn.className += " rotate";//点击添加旋转样式
+			document.getElementById("myMusic").play();
+			title.innerHTML="一路上有你";
+			music1();
+			mark = true;
+			a=true;	
+			
+		}
+		
+			
+	};
+	//下一首播放
+	
+	document.getElementById("nextMusic").onclick = function(){
+		
+		if(mark){
+			document.getElementById('myMusic').load(); //第一首停止
+			btn.className = "play";//点击恢复样式
+			mark=false;
+			con.innerHTML="";
+		}
+	
+		
+		if(a){
+				btn.className += " rotate";//点击添加旋转样式
+				btn.style="background:url('images/5.jpg') no-repeat;";
+				lrc.style="background:url('images/6.jpg') no-repeat;";
+				document.getElementById("xiaoxingyun").play();
+				title.innerHTML="";
+				music2();
+				a = false;
+				
+				
+				title.innerHTML='遥远的她';
+				
+			}
+		
+		
+		
+		
+			
+	};
+	//暂停播放
+	
+	document.getElementById("musicPause").onclick = function(){
+		if(mark){
+			myMusic.pause();//音乐暂停
+			btn.className = "play";//点击恢复样式
+			start1==0;
+			
+		}
+		else if(a==false){
+			xiaoxingyun.pause();//音乐暂停
+			btn.className = "play";//点击恢复样式
+			
+		}	
+		
+	};
+	
+	//播放
+	document.getElementById("musicLoad").onclick = function(){
+	
+		
+		if(mark){
+			myMusic.play();//播放
+			btn.className += " rotate";//点击添加旋转样式
+			
+			music1();
+		}
+		if(a==false){
+			xiaoxingyun.play();//播放
+			btn.className += " rotate";//点击添加旋转样式
+			
+		}
+		
+	};
+
+	
+	/*-----------------获取歌词内容--------------------
+	
+		var lrc = txt.value;//歌词内容
+		var lrcArr = lrc.split("[");//以"["字符开始，分隔成数组，一行一行分成数组 ,01:06.36]*****
+		
+		var html = "";
+		for (var i = 0;i<lrcArr.length ;i++ )//一共几行
+		{
+			var arr = lrcArr[i].split("]");//分隔歌词与时间，第一行分割歌词与时间，即01:06.36，*****
+			
+			var time = arr[0].split(".");//分隔毫秒与其他时间，即01:06，36******
+			var timer = time[0].split(":");//分隔分钟与秒01，06，****
+			var ms = timer[0]*60 + timer[1]*1;//转化为秒钟
+			//字符串类型乘以数字类型就会转化成为数字类型
+			
+			var text = arr[1];//获取歌词部分，一行的歌词部分，在content部分显示歌词
+			if (text){//若不为空
+			html +="<p id="+ms+">"+text+"</p>";
+			}
+			con.innerHTML = html;//在内容上显示歌词，添加到con上，css设置溢出隐藏
+		}
+		
+		var num = 0;
+		var oP = con.getElementsByTagName("p");//通过标签名获取所有p元素,歌词一共62行
+
+		myMusic.addEventListener("timeupdate",function(){//时间监听
+			var curTime = parseInt(this.currentTime);//获取歌曲播放的时间 以秒为单位,parseInt取整
+			
+			if (document.getElementById(curTime))//若歌曲播放了，即有时间
+			{
+				for (var i = 0;i<oP.length ;i++)//歌词行长度为1
+				{	//第一行
+					oP[i].style.cssText = "color:#ccc;font-size:16px;font-weight:bold;"//在播放下一句之前把所有的歌词样式还原
+				}
+				document.getElementById(curTime).style.cssText = "color:yellow;font-size:24px;font-weight:bold;text-shadow:0px 0px 30px yellow;"//当前时间的歌词设置css
+				if (oP[6+num].id == curTime)//从第6行开始，若时间等于当前播放时间，con歌词向上移动30px
+				{
+					con.style.top = -30*num + "px";
+					num ++;//依次加一，歌词向上移动
+				}
+			}
+			
+		});//监听
+	*///
+	
+	
+	
+	
+	//上一首的歌词显示
+	var music1=function(){
+		
+		var lrc = txt.value;//歌词内容
+		var lrcArr = lrc.split("[");//以"["字符开始，分隔成数组，一行一行分成数组 ,01:06.36]*****
+		
+		var html = "";
+		for (var i = 0;i<lrcArr.length ;i++ )//一共几行
+		{
+			var arr = lrcArr[i].split("]");//分隔歌词与时间，第一行分割歌词与时间，即01:06.36，*****
+			
+			var time = arr[0].split(".");//分隔毫秒与其他时间，即01:06，36******
+			var timer = time[0].split(":");//分隔分钟与秒01，06，****
+			var ms = timer[0]*60 + timer[1]*1;//转化为秒钟
+			//字符串类型乘以数字类型就会转化成为数字类型
+			
+			var text = arr[1];//获取歌词部分，一行的歌词部分，在content部分显示歌词
+			if (text){//若不为空
+			html +="<p id="+ms+">"+text+"</p>";
+			}
+			con.innerHTML = html;//在内容上显示歌词，添加到con上，css设置溢出隐藏
+		}
+		lrcDiplay(myMusic);
+	}
+	
+	
+	
+	
+	//下一首的歌词显示
+	var music2=function(){
+		
+		var lrc = txt1.value;//歌词内容
+		var lrcArr = lrc.split("[");//以"["字符开始，分隔成数组，一行一行分成数组 ,01:06.36]*****
+		
+		var html = "";
+		for (var i = 0;i<lrcArr.length ;i++ )//一共几行
+		{
+			var arr = lrcArr[i].split("]");//分隔歌词与时间，第一行分割歌词与时间，即01:06.36，*****
+			
+			var time = arr[0].split(".");//分隔毫秒与其他时间，即01:06，36******
+			var timer = time[0].split(":");//分隔分钟与秒01，06，****
+			var ms = timer[0]*60 + timer[1]*1;//转化为秒钟
+			//字符串类型乘以数字类型就会转化成为数字类型
+			
+			var text = arr[1];//获取歌词部分，一行的歌词部分，在content部分显示歌词
+			if (text){//若不为空
+			html +="<p id="+ms+">"+text+"</p>";
+			}
+			con.innerHTML = html;//在内容上显示歌词，添加到con上，css设置溢出隐藏
+		}
+		
+		lrcDiplay(xiaoxingyun);
+
+	}
+	
+	//歌词显示
+	var lrcDiplay =function(str){
+	
+		var num = 0;
+		var oP = con.getElementsByTagName("p");//通过标签名获取所有p元素,歌词一共62行
+	
+		str.addEventListener("timeupdate",function(){//时间监听
+		var curTime = parseInt(this.currentTime);//获取歌曲播放的时间 以秒为单位,parseInt取整
+		
+		if (document.getElementById(curTime))//若歌曲播放了，即有时间
+		{
+			for (var i = 0;i<oP.length ;i++)//歌词行长度为1
+			{	//第一行
+				oP[i].style.cssText = "color:#ccc;font-size:16px;font-weight:bold;"//在播放下一句之前把所有的歌词样式还原
+			}
+			document.getElementById(curTime).style.cssText = "color:yellow;font-size:24px;font-weight:bold;text-shadow:0px 0px 30px yellow;"//当前时间的歌词设置css
+			if (oP[6+num].id == curTime)//从第6行开始，若时间等于当前播放时间，con歌词向上移动30px
+			{
+				con.style.top = -30*num + "px";
+				num ++;//依次加一，歌词向上移动
+			}
+		}
+		
+	});//监听
+	
+	}
+/*--------------------------旋转3d-------------------------------*/	
+
+
+	
+
+	</script>
+</html>
